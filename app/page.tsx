@@ -6,3 +6,5 @@ export default async function Page() {
   const numbers = await RetellClient.phoneNumber.list();
   return <HomePage agents={agents} numbers={numbers} />;
 }
+
+export const revalidate = 1;
