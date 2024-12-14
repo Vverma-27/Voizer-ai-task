@@ -15,7 +15,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "AI Agents",
-  description: "AI Sales Agents for your business",
+  description: "AI Sales Agents for your business. Powered by Retell.",
 };
 
 export default function RootLayout({
