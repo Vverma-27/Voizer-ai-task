@@ -1,10 +1,9 @@
 import { Input } from "@/components/ui/input";
 import { FaSearch } from "react-icons/fa";
 
-//@eslint-ignore
-interface IconInputProps extends React.InputHTMLAttributes<HTMLInputElement> {}
-
-export default function IconInput({ ...props }: IconInputProps) {
+export default function IconInput(
+  props: React.InputHTMLAttributes<HTMLInputElement>
+) {
   return (
     <div className="grid w-full max-w-sm items-center gap-1.5">
       <div className="relative">

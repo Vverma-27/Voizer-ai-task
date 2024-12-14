@@ -44,7 +44,7 @@ export default function WebCall({
       retellWebClient.stopCall();
       retellWebClient.removeAllListeners();
     };
-  }, [selectedAgent]);
+  }, [selectedAgent, setIsCalling]);
   const handleWebCall = async () => {
     if (isCalling) {
       retellWebClient.stopCall();
