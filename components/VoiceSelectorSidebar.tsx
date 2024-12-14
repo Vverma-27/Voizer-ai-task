@@ -58,7 +58,7 @@ export default function VoiceSelector({
   }));
 
   return (
-    <div className="w-full h-full border-r p-4 overflow-y-auto">
+    <div className="w-full h-[90vh] border-r p-4 overflow-hidden">
       <h2 className="text-lg font-semibold mb-4 text-center">Select Voice</h2>
       <div className="mb-4 flex justify-center">
         <IconInput
@@ -67,7 +67,7 @@ export default function VoiceSelector({
           placeholder="Search by name or language"
         />
       </div>
-      <div className="space-y-6">
+      <div className="space-y-6 h-[calc(100vh-200px)] overflow-auto">
         {agentsByLang.map((lang) => (
           <VoiceGroup
             key={lang.lang}
