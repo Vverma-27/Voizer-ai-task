@@ -1,6 +1,6 @@
 Voizer AI Task
 
-Tech Stack:Next.js,TypeScript,ShadCN,Retell AI
+Tech Stack: Next.js,TypeScript,ShadCN,Retell AI
 
 Features
 
