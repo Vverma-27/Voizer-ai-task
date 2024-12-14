@@ -121,7 +121,7 @@ function VoiceGroup({
             {agent.agent_name}
           </p>
           <Badge className="font-light text-xs">
-            {/* @ts-ignore */}
+            {/* @ts-expect-error because of typescript */}
             {voiceMapping[agent.voice_id.split("-")[1]]}
           </Badge>
         </Button>
