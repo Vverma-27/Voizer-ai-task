@@ -269,11 +269,11 @@ export default function HomePage({
         )}
 
         {/* Call Sidebar for larger screens */}
-        {selectedAgent && selectedLLM && (
-          <div className="hidden md:block md:w-1/4">
+        <div className="hidden md:block md:w-1/4">
+          {selectedAgent && selectedLLM && (
             <CallSidebar numbers={numbers} selectedAgent={selectedAgent} />
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </div>
   );
