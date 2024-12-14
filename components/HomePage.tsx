@@ -47,7 +47,8 @@ export default function HomePage({
   const [selectedMode, setSelectedMode] = useState<MODES>(MODES.VOICE);
 
   useEffect(() => {
-    if (!selectedAgent) return;
+    // @ts-expect-error because of typescript error from retell-sdk
+    if (!selectedAgent?.response_engine?.llm_id) return;
     const fetchLLM = async () => {
       toast.info("Fetching LLM for selected agent");
       setLoading(true);
@@ -60,7 +61,8 @@ export default function HomePage({
       setLoading(false);
     };
     fetchLLM();
-  }, [selectedAgent]);
+    // @ts-expect-error because of typescript error from retell-sdk
+  }, [selectedAgent?.response_engine?.llm_id]);
 
   const setAgentName = (name: string) => {
     if (!selectedAgent) return;
