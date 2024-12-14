@@ -9,6 +9,15 @@ import {
   AgentResponse,
 } from "retell-sdk/resources/index.mjs";
 
+const voiceMapping = {
+  Cimo: "Female",
+  Kate: "Female",
+  Anna: "Female",
+  Emily: "Female",
+  Andrew: "Male",
+  Alfonso: "Male",
+};
+
 export default function VoiceSelector({
   selectedAgent,
   setSelectedAgent,
@@ -103,7 +112,7 @@ function VoiceGroup({
           onClick={() => onSelect(agent)}
           className={`w-full mb-2 py-2 text-lg font-bold flex justify-between items-center 
             bg-[rgba(95,78,225,0.25)] ${
-              selectedAgent === agent.agent_name
+              selectedAgent === agent.agent_id
                 ? "border-2 border-black shadow-lg"
                 : "border border-transparent"
             } hover:border-black hover:shadow-lg hover:bg-[rgba(95,78,225,0.25)]`}
@@ -111,7 +120,10 @@ function VoiceGroup({
           <p className="flex-1 text-left max-w-[70%] overflow-y-hidden overflow-x-auto">
             {agent.agent_name}
           </p>
-          <Badge className="font-light text-xs">{"Male"}</Badge>
+          <Badge className="font-light text-xs">
+            {/* @ts-ignore */}
+            {voiceMapping[agent.voice_id.split("-")[1]]}
+          </Badge>
         </Button>
       ))}
     </div>

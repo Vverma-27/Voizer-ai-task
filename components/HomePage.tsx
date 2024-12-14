@@ -211,7 +211,7 @@ export default function HomePage({
           <div className="fixed inset-0 z-50 bg-black bg-opacity-50 sm:hidden">
             <div className="fixed left-0 top-0 w-64 bg-white h-full shadow-md">
               <VoiceSelector
-                selectedAgent={selectedAgent?.agent_name || ""}
+                selectedAgent={selectedAgent.agent_id}
                 setSelectedAgent={setSelectedAgent}
                 agents={agents}
               />
@@ -232,7 +232,7 @@ export default function HomePage({
         <div className="flex flex-1">
           <div className="hidden sm:block w-full sm:w-1/3">
             <VoiceSelector
-              selectedAgent={selectedAgent?.agent_name || ""}
+              selectedAgent={selectedAgent?.agent_id || ""}
               setSelectedAgent={setSelectedAgent}
               agents={agents}
             />
