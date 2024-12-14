@@ -14,9 +14,9 @@ import { RetellWebClient } from "retell-client-js-sdk";
 import { LlmResponse } from "retell-sdk/resources/llm.mjs";
 import { ToastContainer, toast } from "react-toastify";
 import { Input } from "./ui/input";
-import "react-toastify/dist/ReactToastify.css";
 import { PiHashStraightBold } from "react-icons/pi";
 import { RiVoiceprintFill } from "react-icons/ri";
+import "react-toastify/dist/ReactToastify.css";
 
 export const retellWebClient = new RetellWebClient();
 
@@ -60,8 +60,7 @@ export default function HomePage({
       setLoading(false);
     };
     fetchLLM();
-    // @ts-expect-error because of typescript error from retell-sdk
-  }, [selectedAgent?.response_engine?.llm_id]);
+  }, [selectedAgent]);
 
   const setAgentName = (name: string) => {
     if (!selectedAgent) return;

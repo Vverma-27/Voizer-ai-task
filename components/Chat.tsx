@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import Message from "./Message";
 import { AgentResponse } from "retell-sdk/resources/agent.mjs";
 import { Input } from "./ui/input";
@@ -12,7 +12,9 @@ export default function Chat({
 }: {
   selectedAgent: AgentResponse;
   messages: { role: "user" | "agent"; content: string }[];
-  setMessages: Function;
+  setMessages: Dispatch<
+    SetStateAction<{ role: "user" | "agent"; content: string }[]>
+  >;
 }) {
   const [prompt, setPrompt] = useState("");
 

@@ -1,16 +1,16 @@
 "use client";
-import { useState } from "react";
 import { FaCog, FaCalendar } from "react-icons/fa";
 import { PiHashStraightBold } from "react-icons/pi";
 import { RiVoiceprintFill } from "react-icons/ri";
 import { MODES } from "./HomePage";
+import { Dispatch, SetStateAction } from "react";
 
 export default function Sidebar({
   mode,
   setSelectedMode,
 }: {
   mode: MODES;
-  setSelectedMode: Function;
+  setSelectedMode: Dispatch<SetStateAction<MODES>>;
 }) {
   return (
     <div className="border-r border-[rgba(0,0,0,0.6)] text-black flex flex-col items-center py-4 px-6 gap-4 h-full">

@@ -1,6 +1,7 @@
 import { Input } from "@/components/ui/input";
 import { FaSearch } from "react-icons/fa";
 
+//@eslint-ignore
 interface IconInputProps extends React.InputHTMLAttributes<HTMLInputElement> {}
 
 export default function IconInput({ ...props }: IconInputProps) {

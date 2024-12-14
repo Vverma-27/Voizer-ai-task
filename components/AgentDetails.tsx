@@ -1,11 +1,7 @@
 import { Input } from "@/components/ui/input";
-import { DebouncedInput } from "./DebouncedInput"; // Import the DebouncedInput component
-import { DebouncedTextarea } from "./DebouncedTextarea"; // Import the DebouncedTextarea component
 import { AgentResponse } from "retell-sdk/resources/agent.mjs";
 import { LlmResponse } from "retell-sdk/resources/llm.mjs";
-import { useState, useEffect, useRef } from "react";
-import { Textarea } from "./ui/textarea";
-import { Loader2 } from "lucide-react";
+import { useState, useEffect } from "react";
 import { TextareaWithSpinner } from "./TextareaWithSpinner";
 
 export default function AgentDetails({

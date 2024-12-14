@@ -7,9 +7,9 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
-import { useState } from "react";
 import { Button } from "./ui/button";
 import { toast } from "react-toastify";
+import { Dispatch, SetStateAction } from "react";
 
 export default function Call({
   numbers,
@@ -23,11 +23,11 @@ export default function Call({
 }: {
   numbers: string[];
   selectedNumber: string;
-  setSelectedNumber: Function;
+  setSelectedNumber: Dispatch<SetStateAction<string>>;
   callerName: string;
-  setCallerName: Function;
+  setCallerName: Dispatch<SetStateAction<string>>;
   callerNumber: string;
-  setCallerNumber: Function;
+  setCallerNumber: Dispatch<SetStateAction<string>>;
   agentId: string;
 }) {
   const handleCall = async () => {

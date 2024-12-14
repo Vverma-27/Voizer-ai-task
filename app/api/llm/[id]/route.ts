@@ -38,6 +38,7 @@ export async function GET(
     // Return the response with a 200 status and the result
     return NextResponse.json(result, { status: 200 });
   } catch (error) {
+    console.log("🚀 ~ error:", error);
     // Handle errors gracefully
     return NextResponse.json(
       { receivedKey: "", receivedValue: "", message: "Something went wrong!" },
